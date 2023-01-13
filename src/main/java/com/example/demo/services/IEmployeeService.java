@@ -10,6 +10,8 @@ public interface IEmployeeService {
 	Employee createEmployee(Employee employee);
 	Employee updateEmployee(Employee employee);
 	Employee getEmployeeById(int id);
+	Employee getEmployeeByName(String name);
+	Employee getEmployeeByEmail(String email);
 	String deleteEmployee(int id);
 	List<Employee> findAll();
 	List<Project> findEmployeeProjects(int id);

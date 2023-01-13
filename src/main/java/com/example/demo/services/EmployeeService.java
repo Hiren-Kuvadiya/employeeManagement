@@ -54,4 +54,14 @@ public class EmployeeService implements IEmployeeService {
 	public Employee getEmployeeById(int id) {
 		return employeeRepo.findById(id).orElse(null);
 	}
+
+	@Override
+	public Employee getEmployeeByName(String name) {
+		return employeeRepo.findByName(name).get();
+	}
+
+	@Override
+	public Employee getEmployeeByEmail(String email) {
+		return employeeRepo.findByEmail(email).get();
+	}
 }

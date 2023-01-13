@@ -54,6 +54,16 @@ public class EmployeeController {
 	public Employee findEmployeeById(@PathVariable int id) {
 		return employeeService.getEmployeeById(id);
 	}
+	
+	@GetMapping("/employeeByName/{name}")
+	public Employee findEmployeeByName(@PathVariable String name) {
+		return employeeService.getEmployeeByName(name);
+	}
+	
+	@GetMapping("/employeeByEmail/{email}")
+	public Employee findEmployeeByEmail(@PathVariable String email) {
+		return employeeService.getEmployeeByEmail(email);
+	}
 
 	@PostMapping("/project")
 	public Project createEmployee(@RequestBody Project project) {
